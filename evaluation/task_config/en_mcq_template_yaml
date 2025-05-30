@@ -1,0 +1,33 @@
+dataset_path: parquet
+test_split: train
+output_type: generate_until
+doc_to_visual: !function mcq_utils.mme_realworld_doc_to_visual
+doc_to_text: !function mcq_utils.mme_realworld_doc_to_text
+doc_to_target: "answer"
+generation_kwargs:
+  max_new_tokens: 64
+  temperature: 0
+  top_p: 1.0
+  num_beams: 1
+  do_sample: false
+# The return value of process_results will be used by metrics
+process_results: !function mcq_utils.mme_realworld_process_results
+# Note that the metric name can be either a registed metric function (such as the case for GQA) or a key name returned by process_results
+metric_list:
+  - metric: mme_realworld_score
+    aggregation: !function mcq_utils.mme_realworld_aggregate_results
+    higher_is_better: true
+lmms_eval_specific_kwargs:
+  default:
+    # select_prompt: "Select the best answer for the multiple-choice question based on the image. Only respond with the letter corresponding to the correct answer ({options})."
+    pre_prompt: ""
+    post_prompt: ""
+    # 根据图像选择上述多项选择题的最佳答案，可能有多个选项合适。只需回答正确选项的字母（A, B, C, D 或 E），多个选项之间使用空格隔开。
+  # gpt4v:
+  #   pre_prompt: ""
+  #   post_prompt: "\n根据图像选择上述多项选择题的最佳答案。只需回答正确选项的字母（A, B, C, D 或 E）。"
+  # xcomposer2_4khd:
+  #   pre_prompt: "[UNUSED_TOKEN_146]user\n"
+  #   post_prompt: " 根据图像选择上述多项选择题的最佳答案。只需回答正确选项的字母（A, B, C, D 或 E）。[UNUSED_TOKEN_145]\n[UNUSED_TOKEN_146]assistant\n"
+metadata:
+  - version: 0.0
