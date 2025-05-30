@@ -81,7 +81,7 @@ Following [MME-CoT](https://github.com/MME-Benchmarks/MME-CoT), we report the pr
 
 ## 🚀Evaluation
 
-Please refer to `evaluation/README.md`
+Please refer to [evaluation/README.md](https://github.com/nanocm/OmniEarth-Bench/tree/main/evaluation#evaluation)
 
 ## 🔗Citation
 

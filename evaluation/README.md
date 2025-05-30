@@ -1,25 +1,24 @@
 # Evaluation
 
-## Prepare data
+## 1. Prepare data
 
 * First download the dataset from [huggingface](https://huggingface.co/datasets/initiacms/OmniEarth-Bench).
-* Unzip raw.tar, and copy `jsons/` and `raw/` into the `prepare_data/`
-* Run `mk_shards.py`. This will prepare the parquet files used in evaluation.
+* Unzip raw.tar, and copy `jsons/` and `raw/` into `prepare_data/`.
+* Run `mk_shards.py`. This will generate parquet files used in evaluation.
 
-### Prepare task config
+### 2. Prepare task config
 
-* cd into the `task_config/` and run `mk_yaml.py`. This will creates a bunch of yaml files, each of which stands for a L2 task.
+* Enter the `task_config/` folder and run `mk_yaml.py`. This will generate yaml task files, each of which stands for a L2 task used in `lmms-eval`.
 
-  Be aware, to evaluate the cot tasks, you need to manually change the path in `cot.yaml`.
+  **Note:** to evaluate CoT tasks, you need to manually update the parquet path in `cot.yaml`.
 
 * Install [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval?tab=readme-ov-file#installation) and copy `task_config/` into `lmms_eval/tasks/`
 
-### Benchmark
+### 3. Benchmark
 
 To test on L1 task `Atmosphere`, for example, run the following command:
 
 ```bash
-#!/usr/bin/bash
 TASKS="Atmosphere"	# A tag, can also be Biosphere, Pedosphere, etc.
 MODEL="qwen2_5_vl"
 PRETRAINED_MODEL="Qwen/Qwen2.5-VL-7B-Instruct"
