@@ -2,13 +2,18 @@
   <h2><strong>OmniEarth-Bench: Towards Holistic Evaluation of Earth's Six Spheres and Cross-Spheres Interactions with Multimodal Observational Earth Data</strong></h2>
   <h5>
   Fengxiang Wang<sup>1,2</sup>, Mingshuo Chen<sup>3</sup>, Xuming He<sup>2,4</sup>,  Yi-Fan Zhang<sup>9</sup>
+      <br/>
   Feng Liu<sup>2,5</sup>, Zijie Guo<sup>6</sup>, Zhenghao Hu<sup>7</sup>, Jiong Wang<sup>2,6</sup>, Jingyi Xu<sup>2,6</sup>
+      <br/>
   Zhangrui Li<sup>2,8</sup>, Fenghua Ling<sup>2</sup>, Ben Fei<sup>2</sup>, Weijia Li<sup>7</sup>
   Long Lan<sup>1</sup>, Wenjing Yang<sup>1&nbsp;†</sup>, Wenlong Zhang<sup>2&nbsp;†</sup>, Lei Bai<sup>2</sup>
-      <br/>
+      <br/><br/>
     <sup>1</sup> National University of Defense Technology, China, <sup>2</sup> Shanghai Artificial Intelligence Laboratory, China
+      <br/>
     <sup>3</sup> Beijing University of Posts and Telecommunications, China, <sup>4</sup> Zhejiang University, China
+      <br/>
     <sup>5</sup> Shanghai Jiao Tong University, China, <sup>6</sup> Fudan University, China, <sup>7</sup> Sun Yat-sen University, China
+      <br/>
     <sup>8</sup> Nanjing University, China, <sup>9</sup> Chinese Academy of Sciences
   </h5>
   <p>
@@ -17,23 +22,20 @@
   </p>
 </div>
 
+
 ## 🔥News
 
-* **[TODO]**  Integration with existing evaluation kit.
 * **[2025.05.29]**  The paper is available on arXiv.
 * **[2025.05.15]**  The dataset is available on Hugging Face.
 
 ## 📚 Contents
 
 - [🔥News](#news)
-- [📚 Contents](#-contents)
+- [📚Contents](#-contents)
 - [🔍Dataset Overview](#dataset-overview)
 - [📸Dataset](#dataset)
-- [🚀Usage](#usage)
 - [🔗Citation](#citation)
 - [📬Contact](#contact)
-
-
 
 ## 🔍Dataset Overview
 
@@ -69,15 +71,9 @@ For specific results on each L2, L3 and L4 dimensions, please check the paper's 
 
 Following [MME-CoT](https://github.com/MME-Benchmarks/MME-CoT), we report the precision, recall and f1 on CoT tasks:
 
-<img src="assets/CoT.jpg" alt="CoT" style="zoom:50%;" />
+<img src="assets/CoT.jpg" alt="CoT" style="zoom: 33%;" />
 
 <p align="center"><strong>Fig 5. CoT Performance on OmniEarth-Bench.</strong></p>
-
-## 🚀Usage
-
-### Prompt
-
-### Evaluation
 
 ## 🔗Citation
 
