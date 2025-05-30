@@ -25,8 +25,9 @@
 
 ## 🔥News
 
-* **[2025.05.29]**  The paper is available on arXiv.
-* **[2025.05.15]**  The dataset is available on Hugging Face.
+* **[2025-05-30]** Revised Dataset **v2** in progress (coming soon)
+* **[2025-05-29]** Paper available on arXiv.
+* **[2025-05-15]** Dataset released on Hugging Face.
 
 ## 📚 Contents
 
@@ -34,6 +35,7 @@
 - [📚Contents](#-contents)
 - [🔍Dataset Overview](#dataset-overview)
 - [📸Dataset](#dataset)
+- [🚀Evaluation](#evaluation)
 - [🔗Citation](#citation)
 - [📬Contact](#contact)
 
@@ -50,6 +52,8 @@
 * **CoT-Based Reasoning Evaluations in Earth Science**. OmniEarth-Bench establishes, for the first time, CoT-based evaluations tailored for complex Earth science reasoning tasks, addressing scenarios where previous benchmarks showed near-zero accuracy, and explores how CoT strategies might enhance reasoning capabilities in the Earth domain.
 
 ## 📸Dataset
+
+### Comparision and Examples
 
 ![comparison](assets/comparison.jpg)
 
@@ -74,6 +78,10 @@ Following [MME-CoT](https://github.com/MME-Benchmarks/MME-CoT), we report the pr
 <img src="assets/CoT.jpg" alt="CoT" style="zoom: 33%;" />
 
 <p align="center"><strong>Fig 5. CoT Performance on OmniEarth-Bench.</strong></p>
+
+## 🚀Evaluation
+
+Please refer to `evaluation/README.md`
 
 ## 🔗Citation
 
