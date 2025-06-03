@@ -18,7 +18,9 @@
   </h5>
   <p>
     [📃 <a href="https://arxiv.org/abs/2505.23522" target="_blank">Paper</a>]
+    [🌐 <a href="https://omniearth-bench.github.io" target="_blank">Website</a>]
     [🤗 <a href="https://huggingface.co/datasets/initiacms/OmniEarth-Bench" target="_blank">OmniEarth-Bench</a>]
+    [🏆 <a href="https://omniearth-bench.github.io/#benchmark" target="_blank">Leaderboard</a>]
   </p>
 </div>
 
