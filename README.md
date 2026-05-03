@@ -49,23 +49,48 @@
 
 <p align="center"><strong>Fig 3. Examples of OmniEarth-Bench.</strong></p>
 
-### Benchmark Results
-
-For specific results on each L2, L3 and L4 dimensions, please check the paper's appendix.
-
-![L1](assets/L1.jpg)
-
-<p align="center"><strong>Fig 4. Experimental results on each sphere of VQA tasks, with models ranked by average performance.} Avg. represents the average accuracy across sub-tasks. Proprietary models are highlighted in gray. "Experts" means evaluation results of 100 examples in each sphere by experts. We mark the highest score of each metric in red, and second highest underlined.</strong></p>
-
-Following [MME-CoT](https://github.com/MME-Benchmarks/MME-CoT), we report the precision, recall and f1 on CoT tasks:
-
-<img src="assets/CoT.jpg" alt="CoT" style="zoom: 33%;" />
-
-<p align="center"><strong>Fig 5. CoT Performance on OmniEarth-Bench.</strong></p>
 
 ## 🚀Evaluation
 
-Please refer to [evaluation/README.md](https://github.com/nanocm/OmniEarth-Bench/tree/main/evaluation#evaluation)
+# Evaluation
+
+## 1. Prepare data
+
+* First download the dataset from [huggingface](https://huggingface.co/datasets/initiacms/OmniEarth-Bench).
+* Unzip raw.tar, and copy `jsons/` and `raw/` into `prepare_data/`.
+* Run `mk_shards.py`. This will generate parquet files used in evaluation.
+
+### 2. Prepare task config
+
+* Enter the `task_config/` folder and run `mk_yaml.py`. This will generate yaml task files, each of which stands for a L2 task used in `lmms-eval`.
+
+  **Note:** to evaluate CoT tasks, you need to manually update the parquet path in `cot.yaml`.
+
+* Install [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval?tab=readme-ov-file#installation) and copy `task_config/` into `lmms_eval/tasks/`
+
+### 3. Benchmark
+
+To test on L1 task `Atmosphere`, for example, run the following command:
+
+```bash
+TASKS="Atmosphere"	# A tag, can also be Biosphere, Pedosphere, etc.
+MODEL="qwen2_5_vl"
+PRETRAINED_MODEL="Qwen/Qwen2.5-VL-7B-Instruct"
+MODEL_ARGS="pretrained=${PRETRAINED_MODEL},use_flash_attention_2=True"
+LOG_SUFFIX="${MODEL}_${TASKS}"
+
+accelerate launch --num_processes 8 --main_process_port 12345 -m lmms_eval \
+    --model "qwen2_5_vl" \
+    --model_args ${MODEL_ARGS}  \
+    --tasks ${TASKS} \
+    --batch_size 1 \
+    --log_samples \
+    --log_samples_suffix ${LOG_SUFFIX} \
+    --output_path ./logs/
+```
+
+Check the yaml files for task names to run. The key `task` for each L2 tasks and `tag` for L1 tasks.
+
 
 ## 🔗Citation
 
