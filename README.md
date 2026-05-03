@@ -1,21 +1,5 @@
 <div align="center">
   <h2><strong>OmniEarth-Bench: Towards Holistic Evaluation of Earth's Six Spheres and Cross-Spheres Interactions with Multimodal Observational Earth Data</strong></h2>
-  <h5>
-  Fengxiang Wang<sup>1,2</sup>, Mingshuo Chen<sup>3</sup>, Xuming He<sup>2,4</sup>,  Yi-Fan Zhang<sup>9</sup>
-      <br/>
-  Feng Liu<sup>2,5</sup>, Zijie Guo<sup>6</sup>, Zhenghao Hu<sup>7</sup>, Jiong Wang<sup>2,6</sup>, Jingyi Xu<sup>2,6</sup>
-      <br/>
-  Zhangrui Li<sup>2,8</sup>, Fenghua Ling<sup>2</sup>, Ben Fei<sup>2</sup>, Weijia Li<sup>7</sup>
-  Long Lan<sup>1</sup>, Wenjing Yang<sup>1&nbsp;†</sup>, Wenlong Zhang<sup>2&nbsp;†</sup>, Lei Bai<sup>2</sup>
-      <br/><br/>
-    <sup>1</sup> National University of Defense Technology, China, <sup>2</sup> Shanghai Artificial Intelligence Laboratory, China
-      <br/>
-    <sup>3</sup> Beijing University of Posts and Telecommunications, China, <sup>4</sup> Zhejiang University, China
-      <br/>
-    <sup>5</sup> Shanghai Jiao Tong University, China, <sup>6</sup> Fudan University, China, <sup>7</sup> Sun Yat-sen University, China
-      <br/>
-    <sup>8</sup> Nanjing University, China, <sup>9</sup> Chinese Academy of Sciences
-  </h5>
   <p>
     [📃 <a href="https://arxiv.org/abs/2505.23522" target="_blank">Paper</a>]
     [🌐 <a href="https://omniearth-bench.github.io" target="_blank">Website</a>]
@@ -27,8 +11,6 @@
 
 ## 🔥News
 
-* **[2025-05-30]** Revised Dataset **v2** in progress (coming soon)
-* **[2025-05-29]** Paper available on arXiv.
 * **[2025-05-15]** Dataset released on Hugging Face.
 
 ## 📚 Contents
